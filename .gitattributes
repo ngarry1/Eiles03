@@ -1,4 +1,2 @@
-* text = auto # все файлы
-
-# force text
-*.py text
+*       text=auto
+*.py    diff=python
