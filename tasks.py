@@ -33,20 +33,20 @@ def task002(const_task: int) -> int:
     Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона.
     """
 
-    def fibonacci(n: int) -> int:
-        if n in (1, 2):
+    def fibonacci(n_f: int) -> int:
+        if n_f in (1, 2):
             return 1
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        return fibonacci(n_f - 1) + fibonacci(n_f - 2)
 
     def fib_sum() -> int:
         fib_sum_even: int = 0
-        current_fib_number: int = 0
+        current_fib_number: int = 1
 
-        while current_fib_number <= const_task:
-            current_fib_number += 1
+        while fib_sum_even < const_task:
             fib_number = fibonacci(current_fib_number)
             if (fib_number % 2) == 0:
                 fib_sum_even += fib_number
+            current_fib_number += 1
         return fib_sum_even
 
-    fib_sum()
+    return fib_sum()

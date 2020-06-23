@@ -41,5 +41,3 @@ def test_task02():
         return fib_sum_even
 
     assert fib_sum() == 44
-
-
