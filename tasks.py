@@ -6,7 +6,7 @@
 from typing import Tuple
 
 
-def task01(const_task: Tuple) -> int:
+def task001(const_task: Tuple) -> int:
     """Задача 001
 
     Если выписать все натуральные числа меньше 10,
