@@ -19,6 +19,7 @@ def test_task01():
     assert number_sum == 23
 
 
+@pytest.mark.skip(reason='Проверено')
 def test_task02():
     """ Тест задачи 002"""
 
