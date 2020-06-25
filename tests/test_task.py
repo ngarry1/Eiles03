@@ -44,6 +44,7 @@ def test_task02():
     assert fib_sum() == 44
 
 
+@pytest.mark.skip(reason='Проверено')
 def test_task003():
     """Задача 003
 
@@ -65,6 +66,7 @@ def test_task003():
     if const_task > 1:
         answer.append(const_task)
 
+# Проверка списка answer
     assert len(answer) == 4
     assert answer[0] == 5
     assert answer[1] == 7
