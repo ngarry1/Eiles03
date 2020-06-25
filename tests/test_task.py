@@ -6,7 +6,7 @@
 import pytest
 
 
-@pytest.mark.skip(reason='Проверено')
+# @pytest.mark.skip(reason='Проверено')
 def test_task01():
     """ Тест задачи 001"""
 
