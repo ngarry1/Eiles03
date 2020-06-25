@@ -3,7 +3,7 @@
 
 # Created at 11.06.2020
 
-from typing import Tuple
+from typing import Tuple, List
 
 
 def task001(const_task: Tuple) -> int:
@@ -76,7 +76,7 @@ def task003(const_task: int) -> list:
     return answer
 
 
-def task004(task004_const):
+def task004(task004_const) -> int:
     """Задача 004
 
     Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково.
@@ -84,3 +84,22 @@ def task004(task004_const):
 
     Найдите самый большой палиндром, полученный умножением двух трехзначных чисел."""
 
+    polyndrom_list: List[int] = []
+    polyndrom_list_result: List[int] = []
+
+    for number in range(10, task004_const[0]):
+        if str(number) == str(number)[::-1]:
+            polyndrom_list.append(number)
+
+    print(len(polyndrom_list))
+    divider_item1: int = 0
+    divider_item2: int = 0
+
+    for divider_item1 in range(10, task004_const[0]):
+        for divider_item2 in range(divider_item1, task004_const[0]):
+            multiply = divider_item1 * divider_item2
+            if (divider_item1 and divider_item2) <= task004_const[1]:
+                if multiply in polyndrom_list:
+                    polyndrom_list_result.append(multiply)
+    print('Делитель 1', divider_item1, 'Делитель 2', divider_item2)
+    return max(polyndrom_list_result)
