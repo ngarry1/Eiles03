@@ -14,22 +14,36 @@ from typing import Tuple  # Для задачи 001
 # task003_const: int = 2
 
 params = {
-    'Task001': (10, 3, 5),
-    'Task002': 4000000,
-    'Task003': 600851475143,
-    'Task004': 2,
+    'Task001': (1000, 3, 5),  # Задача 001
+    'Task002': 4000000,  # Задача 002
+    'Task003': 600851475143,  # Задача 003
+    'Task004': 2,  # Задача 004
 }
 
 
 if __name__ == '__main__':
-    # print(tasks.task001.__doc__) # Для задачи 001
-    # print('Результат: ', str(tasks.task001(task001_const))) # Для задачи 001
+    # print(tasks.task001.__doc__)
+    # try:
+    #     print('Результат: ', str(tasks.task001(params['Task001'])))
+    # except KeyError:
+    #     print('Ошибка в параметрах задачи 001')
 
     # print(tasks.task002.__doc__)
-    # print('Результат: ', tasks.task002(task002_const))
+    # try:
+    #     print('Результат: ', tasks.task002(params['Task002']))
+    # except KeyError:
+    #     print('Ошибка в параметрах задачи 002')
 
     # print(tasks.task003.__doc__)
-    # print('Результат: ', tasks.task003(task003_const)[-1])
+    # try:
+    #     print('Результат: ', tasks.task003(params['Task003'])[-1])
+    # except KeyError:
+    #     print('Ошибка в параметрах задачи 003')
+
+
     print(tasks.task004.__doc__)
-    print('Результат: ', tasks.task004(params['Test004']))
+    try:
+        print('Результат: ', tasks.task004(params['Task004']))
+    except KeyError:
+        print('Ошибка в параметрах задачи 004')
 
