@@ -42,3 +42,34 @@ def test_task02():
         return fib_sum_even
 
     assert fib_sum() == 44
+
+
+def test_task003():
+    """Задача 003
+
+    Простые делители числа 13195 - это 5, 7, 13 и 29.
+
+    Каков самый большой делитель числа 600851475143, являющийся простым числом?
+    """
+
+    answer: list = []
+    divider: int = 2
+    const_task = 13195
+
+    while divider * divider <= const_task:
+        if const_task % divider == 0:
+            answer.append(divider)
+            const_task //= divider
+        else:
+            divider += 1
+    if const_task > 1:
+        answer.append(const_task)
+
+    assert len(answer) == 4
+    assert answer[0] == 5
+    assert answer[1] == 7
+    assert answer[2] == 13
+    assert answer[3] == 29
+
+    return answer
+
