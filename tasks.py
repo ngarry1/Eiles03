@@ -89,15 +89,13 @@ def task004(task004_const) -> int:
     polyndrome_list: List[int] = []
     polyndrome_list_result: List[int] = []
 
-    for number in range(10, task004_const[0]):
+    for number in range(100, task004_const):
         if str(number) == str(number)[::-1]:
             polyndrome_list.append(number)
 
-    for divider_item1 in range(10, task004_const[1]):
-        for divider_item2 in range(divider_item1, task004_const[1]):
+    for divider_item1 in range(10, 1000):
+        for divider_item2 in range(divider_item1, 1000):
             multiply = divider_item1 * divider_item2
-            if (divider_item1 < task004_const[1]) and \
-                    (divider_item2 < task004_const[1]) and \
-                    (multiply in polyndrome_list):
+            if multiply in polyndrome_list:
                 polyndrome_list_result.append(multiply)
     return max(polyndrome_list_result)
