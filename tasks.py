@@ -86,16 +86,12 @@ def task004(task004_const) -> int:
 
     Найдите самый большой палиндром, полученный умножением двух трехзначных чисел."""
 
-    polyndrome_list: List[int] = []
     polyndrome_list_result: List[int] = []
 
-    for number in range(100, task004_const):
-        if str(number) == str(number)[::-1]:
-            polyndrome_list.append(number)
-
-    for divider_item1 in range(10, 1000):
-        for divider_item2 in range(divider_item1, 1000):
+    for divider_item1 in range(10, task004_const):
+        for divider_item2 in range(divider_item1, task004_const):
             multiply = divider_item1 * divider_item2
-            if multiply in polyndrome_list:
+            if str(multiply) == str(multiply)[::-1]:
+                # multiply = max()
                 polyndrome_list_result.append(multiply)
     return max(polyndrome_list_result)
