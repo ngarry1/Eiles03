@@ -5,6 +5,8 @@
 
 from typing import Tuple, List
 
+import sys
+
 
 def task001(const_task: Tuple) -> int:
     """Задача 001
@@ -84,22 +86,18 @@ def task004(task004_const) -> int:
 
     Найдите самый большой палиндром, полученный умножением двух трехзначных чисел."""
 
-    polyndrom_list: List[int] = []
-    polyndrom_list_result: List[int] = []
+    polyndrome_list: List[int] = []
+    polyndrome_list_result: List[int] = []
 
     for number in range(10, task004_const[0]):
         if str(number) == str(number)[::-1]:
-            polyndrom_list.append(number)
+            polyndrome_list.append(number)
 
-    print(len(polyndrom_list))
-    divider_item1: int = 0
-    divider_item2: int = 0
-
-    for divider_item1 in range(10, task004_const[0]):
-        for divider_item2 in range(divider_item1, task004_const[0]):
+    for divider_item1 in range(10, task004_const[1]):
+        for divider_item2 in range(divider_item1, task004_const[1]):
             multiply = divider_item1 * divider_item2
-            if (divider_item1 and divider_item2) <= task004_const[1]:
-                if multiply in polyndrom_list:
-                    polyndrom_list_result.append(multiply)
-    print('Делитель 1', divider_item1, 'Делитель 2', divider_item2)
-    return max(polyndrom_list_result)
+            if (divider_item1 < task004_const[1]) and \
+                    (divider_item2 < task004_const[1]) and \
+                    (multiply in polyndrome_list):
+                polyndrome_list_result.append(multiply)
+    return max(polyndrome_list_result)

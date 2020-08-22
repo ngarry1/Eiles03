@@ -9,7 +9,7 @@ from timeit import default_timer as timer
 
 
 def measure_time(func):
-    """Декоратор"""
+    """Декоратор измерения"""
 
     def inner(*args, **kwargs):
         start = timer()
@@ -94,6 +94,5 @@ def task003(const_task: int) -> list:
         answer.append(const_task)
     return answer
 
-
-task003(600851475143)
-
+# task003(600851475143)
+# -------------------------------------------------------------------------------------------

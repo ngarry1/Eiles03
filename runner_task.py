@@ -8,16 +8,16 @@
 import tasks
 from typing import Tuple  # Для задачи 001
 
-# task001_const: Tuple[int, int, int] = (10, 3, 5) # Для задачи 001
+# task001_const: Tuple[int, int, int] = (10, 3, 5)
 # task002_const: int = 4000000
 # task003_const: int = 600851475143
 # task003_const: int = 2
 
 params = {
-    'Task001': (1000, 3, 5),  # Задача 001
-    'Task002': 4000000,  # Задача 002
-    'Task003': 600851475143,  # Задача 003
-    'Task004': (99999, 99)  # Задача 004
+    'Task001': (1000, 3, 5),    # Задача 001
+    'Task002': 4000000,         # Задача 002
+    'Task003': 600851475143,    # Задача 003
+    'Task004': (1000000, 1000)  # Задача 004
 }
 
 
