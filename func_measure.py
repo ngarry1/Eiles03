@@ -4,7 +4,7 @@
 # Created at 23.06.2020
 """Измерение производительности"""
 
-from typing import Tuple
+from typing import List, Tuple
 from timeit import default_timer as timer
 
 
@@ -96,3 +96,28 @@ def task003(const_task: int) -> list:
 
 # task003(600851475143)
 # -------------------------------------------------------------------------------------------
+@measure_time
+def task004(task004_const) -> int:
+    """Задача 004
+
+    Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково.
+    Самое большое число-палиндром, полученное умножением двух двузначных чисел – 9009 = 91 × 99.
+
+    Найдите самый большой палиндром, полученный умножением двух трехзначных чисел."""
+
+    polyndrome_list: List[int] = []
+    polyndrome_list_result: List[int] = []
+
+    for number in range(100, task004_const):
+        if str(number) == str(number)[::-1]:
+            polyndrome_list.append(number)
+
+    for divider_item1 in range(10, 1000):
+        for divider_item2 in range(divider_item1, 1000):
+            multiply = divider_item1 * divider_item2
+            if multiply in polyndrome_list:
+                polyndrome_list_result.append(multiply)
+    return max(polyndrome_list_result)
+
+
+task004(1000000)
