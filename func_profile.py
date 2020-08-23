@@ -4,6 +4,7 @@
 # Created at 22.08.2020
 import cProfile
 
+
 def task004(task004_const) -> int:
     """Задача 004
 
