@@ -76,6 +76,7 @@ def test_task003():
     return answer
 
 
+@pytest.mark.skip(reason='Проверено')
 def test_task006():
     """ Тест задачи 006"""
 
