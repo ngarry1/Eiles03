@@ -4,6 +4,7 @@
 # Created at 11.06.2020
 
 from typing import Tuple, List
+import math
 
 import sys
 
@@ -95,3 +96,52 @@ def task004(task004_const) -> int:
                 # multiply = max()
                 polyndrome_list_result.append(multiply)
     return max(polyndrome_list_result)
+
+
+# def task005(task005_const) -> int:
+#     """Задача 005
+#
+#     2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
+#
+#     Какое самое маленькое число делится нацело на все числа от 1 до 20? """
+
+    number_const: int = math.factorial(task005_const)
+    dividers: List[int] = [j for j in range(1, task005_const + 1)]
+    dividend: List[int] = []
+    j: int = 1
+    # count: int = 0
+    # print(dividers)
+    # sys.exit()
+
+    # for index in dividers:
+    #     while j < number_const:
+    #         k = j % dividers[index]
+    #         if k == 0:
+    #             dividend.append(j)
+    #             # count += 1
+    #             # if count == task005_const:
+    #             # return j
+    #         j += 1
+    # for index in dividers:
+    #     item_list = number_const / dividers[index]
+    #     dividend.append(dividend, item_list)
+    # return j
+
+
+def task006(task006_const) -> int:
+    """Задача 006
+    Сумма квадратов первых десяти натуральных чисел равна:
+    1^2 + 2^2 + ... + 10^2 = 385
+    Квадрат суммы первых десяти натуральных чисел равен:
+    (1 + 2 + ... + 10)^2 = 55^2 = 3025
+    Следовательно, разность между суммой квадратов и квадратом суммы первых десяти натуральных чисел составляет 3025 − 385 = 2640.
+
+    Найдите разность между суммой квадратов и квадратом суммы первых ста натуральных чисел."""
+
+    number10s: List[int] = [j ** 2 for j in range(1, task006_const + 1)]
+    number10_sum_s: List[int] = [j for j in range(1, task006_const + 1)]
+
+    return sum(number10_sum_s) ** 2 - sum(number10s)
+
+
+

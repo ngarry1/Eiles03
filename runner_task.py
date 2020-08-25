@@ -18,6 +18,8 @@ params = {
     'Task002': 4000000,         # Задача 002
     'Task003': 600851475143,    # Задача 003
     'Task004': 1000,            # Задача 004
+    'Task005': 20,              # Задача 005
+    'Task006': 100,              # Задача 006
 }
 
 
@@ -40,9 +42,20 @@ if __name__ == '__main__':
     # except KeyError:
     #     print('Ошибка в параметрах задачи 003')
 
-    print(tasks.task004.__doc__)
-    try:
-        print('Результат: ', tasks.task004(params['Task004']))
-    except KeyError:
-        print('Ошибка в параметрах задачи 004')
+    # print(tasks.task004.__doc__)
+    # try:
+    #     print('Результат: ', tasks.task004(params['Task004']))
+    # except KeyError:
+    #     print('Ошибка в параметрах задачи 004')
 
+    # print(tasks.task005.__doc__)
+    # try:
+    #     print('Результат: ', tasks.task005(params['Task005']))
+    # except KeyError:
+    #     print('Ошибка в параметрах задачи 005')
+
+    print(tasks.task006.__doc__)
+    try:
+        print('Результат: ', tasks.task006(params['Task006']))
+    except KeyError:
+        print('Ошибка в параметрах задачи 006')

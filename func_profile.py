@@ -3,7 +3,7 @@
 
 # Created at 22.08.2020
 import cProfile
-
+from typing import List
 
 def task004(task004_const) -> int:
     """Задача 004
