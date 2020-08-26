@@ -5,6 +5,7 @@
 import cProfile
 from typing import List
 
+
 def task004(task004_const) -> int:
     """Задача 004
 

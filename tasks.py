@@ -105,28 +105,6 @@ def task004(task004_const) -> int:
 #
 #     Какое самое маленькое число делится нацело на все числа от 1 до 20? """
 
-    number_const: int = math.factorial(task005_const)
-    dividers: List[int] = [j for j in range(1, task005_const + 1)]
-    dividend: List[int] = []
-    j: int = 1
-    # count: int = 0
-    # print(dividers)
-    # sys.exit()
-
-    # for index in dividers:
-    #     while j < number_const:
-    #         k = j % dividers[index]
-    #         if k == 0:
-    #             dividend.append(j)
-    #             # count += 1
-    #             # if count == task005_const:
-    #             # return j
-    #         j += 1
-    # for index in dividers:
-    #     item_list = number_const / dividers[index]
-    #     dividend.append(dividend, item_list)
-    # return j
-
 
 def task006(task006_const) -> int:
     """Задача 006

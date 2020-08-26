@@ -3,6 +3,7 @@
 
 # Created at 23.06.2020
 from typing import List
+import math
 import pytest
 
 
@@ -84,3 +85,31 @@ def test_task006():
     assert difference == 2640
 
     return difference
+
+
+def test_task007():
+    """ Тест задачи 007"""
+
+    test_list: List[int] = [2, 3, 5, 7, 11, 13]
+    count: int = 6
+
+    number: int = 13
+    lst: List[int] = []
+
+    for i in range(2, number + 1):
+        if i > 10:
+            if (i % 2 == 0) or (i % 10 == 5):
+                continue
+        for j in lst:
+            if j > int((math.sqrt(i)) + 1):
+                lst.append(i)
+                break
+            if i % j == 0:
+                break
+        else:
+            lst.append(i)
+
+    assert test_list == lst
+    assert count == len(test_list)
+
+    return lst
