@@ -4,9 +4,34 @@
 # Created at 11.06.2020
 
 from typing import Tuple, List
-import math
+from math import sqrt
 
-import sys
+
+def prime(number) -> List[int]:
+    """Список всех простых чисел в диапазоне 1 - N
+
+        :param number: Натуральное число в диапазоне 1 - N
+        :type number: int
+        :return: List[int]>
+
+    """
+
+    lst = [2]
+    for i in range(3, number + 1, 2):
+        if (i > 10) and (i % 10 == 5):
+            continue
+        for j in lst:
+            if j > int((sqrt(i)) + 1):
+                lst.append(i)
+                break
+            if i % j == 0:
+                break
+        else:
+            lst.append(i)
+
+    return lst
+
+#-----------------------------------------
 
 
 def task001(const_task: Tuple) -> int:
