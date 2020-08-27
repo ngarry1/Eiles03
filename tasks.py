@@ -121,11 +121,16 @@ def task006(task006_const) -> int:
     return sum(number10_sum_s) ** 2 - sum(number10s)
 
 
-def task007():
+def task007(task007_const):
     """Задача 007
         Выписав первые шесть простых чисел, получим 2, 3, 5, 7, 11 и 13.
         Очевидно, что 6-ое простое число - 13.
 
         Какое число является 10001-ым простым числом?"""
 
-    return len(prime(13))
+    number_natural: int = 2
+    while len(prime(number_natural)) < task007_const:
+        number_natural += 1
+
+    return prime(number_natural)[-1]
+

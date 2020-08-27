@@ -3,6 +3,7 @@
 
 # Created at 23.06.2020
 from typing import List
+from functions import prime
 import math
 import pytest
 
@@ -90,28 +91,13 @@ def test_task006():
 def test_task007():
     """ Тест задачи 007"""
 
-    test_list: List[int] = [2, 3, 5, 7, 11, 13]
-    count: int = 6
+    task007_const: int = 6
+    lis: List[int] = [2, 3, 5, 7, 11, 13]
 
-    number: int = 13
-    lst: List[int] = []
-    k: int = 0
-    while k <= count:
-        for i in range(2, count + 1):
-            if i > 10:
-                if (i % 2 == 0) or (i % 10 == 5):
-                    continue
-            for j in lst:
-                if j > int((math.sqrt(i)) + 1):
-                    lst.append(i)
-                    break
-                if i % j == 0:
-                    break
-            else:
-                lst.append(i)
-        k = k + 1
+    number_natural: int = 2
+    while len(prime(number_natural)) < task007_const:
+        number_natural += 1
+    assert lis == prime(number_natural)
 
-    # assert test_list == lst
-    # assert count == len(test_list)
+    return prime(number_natural)[-1]
 
-    return lst

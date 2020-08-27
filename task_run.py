@@ -8,11 +8,6 @@
 import tasks
 from typing import Tuple  # Для задачи 001
 
-# task001_const: Tuple[int, int, int] = (10, 3, 5)
-# task002_const: int = 4000000
-# task003_const: int = 600851475143
-# task003_const: int = 2
-
 params = {
     'Task001': (1000, 3, 5),    # Задача 001
     'Task002': 4000000,         # Задача 002
@@ -20,7 +15,7 @@ params = {
     'Task004': 1000,            # Задача 004
     'Task005': 20,              # Задача 005
     'Task006': 100,             # Задача 006
-    'Task007': 0,               # Задача 007
+    'Task007': 10001,           # Задача 007
 }
 
 
@@ -70,6 +65,6 @@ if __name__ == '__main__':
 
     print(tasks.task007.__doc__)
     try:
-        print('Результат: ', tasks.task007())
+        print('Результат: ', tasks.task007(params['Task007']))
     except KeyError:
         print('Ошибка в параметрах задачи 007')
