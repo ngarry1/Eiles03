@@ -20,7 +20,7 @@ params = {
     'Task004': 1000,            # Задача 004
     'Task005': 20,              # Задача 005
     'Task006': 100,             # Задача 006
-    'Task007': 26,              # Задача 007
+    'Task007': 0,               # Задача 007
 }
 
 
@@ -61,10 +61,15 @@ if __name__ == '__main__':
     # except KeyError:
     #     print('Ошибка в параметрах задачи 006')
 
-    print(tasks.prime.__doc__)
-    try:
-        print('Число: ', tasks.prime(params['Task007'])[-1])
-        print('Индекс в списке: ', len(tasks.prime(params['Task007'])))
-    except KeyError:
-        print('Ошибка в параметрах задачи 006')
+    # print(tasks.prime.__doc__)
+    # try:
+    #     print('Число: ', tasks.prime(params['Task007'])[-1])
+    #     print('Индекс в списке: ', len(tasks.prime(params['Task007'])))
+    # except KeyError:
+    #     print('Ошибка в параметрах задачи 007')
 
+    print(tasks.task007.__doc__)
+    try:
+        print('Результат: ', tasks.task007())
+    except KeyError:
+        print('Ошибка в параметрах задачи 007')
